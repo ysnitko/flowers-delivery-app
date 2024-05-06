@@ -1,9 +1,18 @@
 import type { Metadata } from 'next';
+import local from 'next/font/local';
 import { Inter } from 'next/font/google';
 import Link from 'next/link';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
+const gilroy = local({
+  src: [
+    {
+      path: '../public/Gilroy/Gilroy-Regular.ttf',
+      weight: '400',
+    },
+  ],
+});
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -17,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${gilroy.className} ${inter.className}`}>
         <header className="flex justify-between">
           <div>
             <Link href={'/'}>Shop</Link>
