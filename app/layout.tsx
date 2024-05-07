@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import local from 'next/font/local';
 import { Inter } from 'next/font/google';
-import Link from 'next/link';
+import Header from './components/header';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -27,16 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${gilroy.className} ${inter.className}`}>
-        <header className="flex justify-between">
-          <div>
-            <Link href={'/'}>Shop</Link>
-            <Link href={'/'}>Contact</Link>
-          </div>
-          <div>
-            <Link href={'/'}>Sign in</Link>
-            <Link href={'/'}>Cart</Link>
-          </div>
-        </header>
+        <Header />
         {children}
       </body>
     </html>
