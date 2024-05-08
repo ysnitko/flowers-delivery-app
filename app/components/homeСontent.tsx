@@ -1,4 +1,4 @@
-export default function HomeСontetnt() {
+export default function HomeСontent() {
   return (
     <div>
       <div></div>
