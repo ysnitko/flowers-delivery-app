@@ -16,6 +16,9 @@ const config: Config = {
       fontFamily: {
         gilroy: ['Gilroy', 'sans-serif'],
       },
+      borderColor: {
+        'border-table': '#000',
+      },
     },
   },
   plugins: [],

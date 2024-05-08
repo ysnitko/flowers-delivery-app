@@ -1,3 +1,4 @@
+import HomeСontetnt from './components/homeСontetnt';
 export default function Home() {
   // useEffect(() => {
   //   // Отправка запроса к вашему API маршруту при загрузке страницы
@@ -11,8 +12,8 @@ export default function Home() {
   //     });
   // }, []);
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24 text-gilroy">
-      asfsdfds
+    <main className="">
+      <HomeСontetnt />
     </main>
   );
 }
