@@ -1,8 +1,9 @@
 import Image from 'next/image';
+import ShopMenu from './shopMenu';
 
 export default function MainСontent() {
   return (
-    <div className="grid grid-cols-2">
+    <div className="grid grid-cols-2 border-b-[1px] border-r-[1px] border-border-table">
       <div className="flex flex-col p-[80px]">
         <div className="flex flex-col gap-4 border-b-[1px] border-border-table">
           <p className="text-[67px] leading-[70px]">
@@ -28,13 +29,13 @@ export default function MainСontent() {
             width={256}
             height={256}
           />
-          <p className="flex items-end text-base pl-6 border-l-[1px] border-border-table">
+          <p className="flex items-end text-xs pl-6 border-l-[1px] border-border-table">
             Experience the joy of giving with our modern floral studio. Order
             online and send fresh flowers, plants and gifts today.
           </p>
         </div>
       </div>
-      <div>dfd</div>
+      <ShopMenu />
     </div>
   );
 }
