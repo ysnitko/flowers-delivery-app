@@ -1,3 +1,4 @@
+import { url } from 'inspector';
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
@@ -18,6 +19,10 @@ const config: Config = {
       },
       borderColor: {
         'border-table': '#000',
+      },
+      content: {
+        'arrow-right': 'url(/assets/arrow-right.svg)',
+        'arrow-left': 'url(/assets/arrow-left.svg)',
       },
     },
   },
