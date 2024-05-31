@@ -1,8 +1,8 @@
-export default function aboutUS() {
+export default function AboutUS() {
   return (
-    <section className="flex">
-      <h1>About us</h1>
-      <div>
+    <section className="grid grid-cols-2">
+      <h1 className="p-[80px] text-5xl">About us</h1>
+      <div className="flex p-[80px]">
         <p>OUR STORY</p>
         <p>Kyiv LuxeBouquets</p>
         <p>

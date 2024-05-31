@@ -1,4 +1,5 @@
 import MainContent from './components/mainСontent';
+import AboutUs from './components/aboutUs';
 export default function Home() {
   // useEffect(() => {
   //   // Отправка запроса к вашему API маршруту при загрузке страницы
@@ -14,6 +15,7 @@ export default function Home() {
   return (
     <main className="">
       <MainContent />
+      <AboutUs />
     </main>
   );
 }
