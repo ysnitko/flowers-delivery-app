@@ -1,5 +1,6 @@
 import MainContent from './components/mainСontent';
 import AboutUs from './components/aboutUs';
+import ChooseUS from './components/chooseUs';
 export default function Home() {
   // useEffect(() => {
   //   // Отправка запроса к вашему API маршруту при загрузке страницы
@@ -16,6 +17,7 @@ export default function Home() {
     <main className="">
       <MainContent />
       <AboutUs />
+      <ChooseUS />
     </main>
   );
 }
