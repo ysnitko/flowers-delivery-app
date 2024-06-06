@@ -24,6 +24,10 @@ const config: Config = {
         'arrow-right': 'url(/assets/arrow-right.svg)',
         'arrow-left': 'url(/assets/arrow-left.svg)',
       },
+      colors: {
+        'border-input': '#D2D2D7',
+        'text-btn': '#FFFFFF',
+      },
     },
   },
   plugins: [],
