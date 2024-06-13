@@ -5,7 +5,7 @@ import { CONTACTS } from '../lib/contacts';
 export default function ContactUs() {
   return (
     <section className="grid grid-cols-2 border-b-[1px] border-border-table">
-      <div className="flex  flex-col gap-6 ">
+      <div className="flex flex-col gap-6 ">
         <div className="p-[80px] ">
           <h1 className="text-[50px]">To Contact Us</h1>
           <div className="flex flex-col gap-4">
@@ -25,7 +25,7 @@ export default function ContactUs() {
         <div className="grid grid-cols-2 border-[1px] border-border-table border-r-0 border-b-0 h-full">
           <div className="border-r-[1px] border-border-table">
             <p className="px-[10px] py-4 text-[38px]">Phone</p>
-            <div className="flex flex-col p-[50px] gap-5 justify-center items-center">
+            <div className="flex flex-col p-[20px] gap-5 justify-center items-center">
               <label htmlFor="tel" className="flex gap-2">
                 <Image
                   src="/assets/call.svg"
@@ -60,7 +60,7 @@ export default function ContactUs() {
           </div>
           <div>
             <p className="px-[10px] py-4 text-[38px]">Address</p>
-            <div className="p-[50px] flex flex-col gap-4 items-center">
+            <div className="p-[20px] flex flex-col gap-4 items-center">
               <p className="text-sm">OPENING HOURS: 8 TO 11 P.M.</p>
               <div className="flex gap-2">
                 <Image
@@ -78,7 +78,7 @@ export default function ContactUs() {
 
       <div>
         <Image
-          className=" aspect-square"
+          className="aspect-square w-full"
           src="/assets/restaurant.png"
           alt="rest"
           width={720}
@@ -89,9 +89,9 @@ export default function ContactUs() {
             Follow us
           </p>
           <ul className="flex gap-8 px-8 py-4">
-            {CONTACTS.map((brand) => {
+            {CONTACTS.map((brand, index) => {
               return (
-                <li>
+                <li key={index}>
                   <Link href="/">
                     <Image
                       src={brand.src}

@@ -2,6 +2,7 @@ import MainContent from './components/mainСontent';
 import AboutUs from './components/aboutUs';
 import ChooseUS from './components/chooseUs';
 import ContactUs from './components/contactUs';
+import OurService from './components/ourService';
 export default function Home() {
   // useEffect(() => {
   //   // Отправка запроса к вашему API маршруту при загрузке страницы
@@ -20,6 +21,7 @@ export default function Home() {
       <AboutUs />
       <ChooseUS />
       <ContactUs />
+      <OurService />
     </main>
   );
 }
