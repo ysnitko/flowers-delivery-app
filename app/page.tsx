@@ -3,6 +3,8 @@ import AboutUs from './components/aboutUs';
 import ChooseUS from './components/chooseUs';
 import ContactUs from './components/contactUs';
 import OurService from './components/ourService';
+import WeddingEvent from './components/weddingEvent';
+
 export default function Home() {
   // useEffect(() => {
   //   // Отправка запроса к вашему API маршруту при загрузке страницы
@@ -16,12 +18,13 @@ export default function Home() {
   //     });
   // }, []);
   return (
-    <main className="">
+    <main>
       <MainContent />
       <AboutUs />
       <ChooseUS />
       <ContactUs />
       <OurService />
+      <WeddingEvent />
     </main>
   );
 }

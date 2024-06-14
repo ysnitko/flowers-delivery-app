@@ -26,36 +26,28 @@ export default function ContactUs() {
           <div className="border-r-[1px] border-border-table">
             <p className="px-[10px] py-4 text-[38px]">Phone</p>
             <div className="flex flex-col p-[20px] gap-5 justify-center items-center">
-              <label htmlFor="tel" className="flex gap-2">
+              <div className="flex gap-2">
                 <Image
                   src="/assets/call.svg"
                   alt="phone"
                   width={24}
                   height={24}
                 />
-                <input
-                  className="text-base"
-                  type="tel"
-                  name="tel"
-                  id="tel"
-                  value="+380980099777"
-                />
-              </label>
-              <label htmlFor="tel_tw" className="flex gap-2">
+                <a href={`tel:${+380980099777}`} className="text-base">
+                  +380980099777
+                </a>
+              </div>
+              <div className="flex gap-2">
                 <Image
                   src="/assets/call.svg"
                   alt="phone"
                   width={24}
                   height={24}
                 />
-                <input
-                  className="text-base"
-                  type="tel"
-                  name="tel_tw"
-                  id="tel_tw"
-                  value="+380980099111"
-                />
-              </label>
+                <a href={`tel:${+380980099111}`} className="text-base">
+                  +380980099111
+                </a>
+              </div>
             </div>
           </div>
           <div>

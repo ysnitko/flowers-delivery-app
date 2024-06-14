@@ -4,7 +4,7 @@ import Image from 'next/image';
 export default function ShopMenu() {
   return (
     <div className="relative overflow-scroll">
-      <ul className="grid grid-cols-2 grid-rows-5 gap-0 absolute [&_li]:border-border-table">
+      <ul className="grid grid-cols-2 grid-rows-5 gap-0 absolute [&_li]:border-border-table w-full">
         <li className="flex flex-col items-center justify-end border-l-[1px] border-b-[1px] ">
           <div className=" flex flex-col h-[60%] gap-20  items-center">
             <p className="text-4xl font-bold">Fresh Flowers</p>

@@ -11,6 +11,7 @@ const config: Config = {
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'wedding-bg': "url('/assets/wedding-bg.png')",
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
@@ -19,6 +20,7 @@ const config: Config = {
       },
       borderColor: {
         'border-table': '#000',
+        'border-white': '#ffffff',
       },
       content: {
         'arrow-right': 'url(/assets/arrow-right.svg)',
