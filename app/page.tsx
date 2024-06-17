@@ -4,6 +4,7 @@ import ChooseUS from './components/chooseUs';
 import ContactUs from './components/contactUs';
 import OurService from './components/ourService';
 import WeddingEvent from './components/weddingEvent';
+import ClientSay from './components/clientSay';
 
 export default function Home() {
   // useEffect(() => {
@@ -25,6 +26,7 @@ export default function Home() {
       <ContactUs />
       <OurService />
       <WeddingEvent />
+      <ClientSay />
     </main>
   );
 }
