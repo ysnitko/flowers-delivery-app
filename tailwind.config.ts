@@ -29,6 +29,7 @@ const config: Config = {
       colors: {
         'border-input': '#D2D2D7',
         'text-btn': '#FFFFFF',
+        'text-footer': '#808080',
       },
     },
   },

@@ -20,3 +20,68 @@ export const CONTACTS = [
     src: '/assets/Brands_Telegram.svg',
   },
 ];
+
+export const LINKS_SHOP = [
+  {
+    name: 'All Products',
+    src: '/',
+  },
+  {
+    name: 'Fresh Flowers',
+    src: '/',
+  },
+  {
+    name: 'Dried Flowers',
+    src: '/',
+  },
+  {
+    name: 'Live Plants',
+    src: '/',
+  },
+  {
+    name: 'Designer Vases',
+    src: '/',
+  },
+  {
+    name: 'Aroma Candles',
+    src: '/',
+  },
+  {
+    name: 'Freshener Diffuser',
+    src: '/',
+  },
+];
+
+export const LINKS_SERVICE = [
+  {
+    name: 'Flower Subcription',
+    src: '/',
+  },
+  {
+    name: 'Wedding & Event Decor',
+    src: '/',
+  },
+];
+
+export const LINKS_ABOUT = [
+  {
+    name: 'Our story',
+    src: '/',
+  },
+  {
+    name: 'Blog',
+    src: '/',
+  },
+  {
+    name: 'Shipping & returns',
+    src: '/',
+  },
+  {
+    name: 'Terms & conditions',
+    src: '/',
+  },
+  {
+    name: 'Privacy policy',
+    src: '/',
+  },
+];
