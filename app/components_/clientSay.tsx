@@ -1,8 +1,8 @@
-import Image from "next/image";
+import Image from 'next/image';
 
 export default function ClientSay() {
   return (
-    <section className="p-20 flex flex-col items-center gap-6  border-r-[1px] border-l-[1px] border-border-table">
+    <section className="p-20 flex flex-col items-center gap-6">
       <div className="flex flex-col gap-2 items-center">
         <Image
           src="/assets/google_logo.svg"

@@ -1,16 +1,16 @@
-import Link from "next/link";
-import Image from "next/image";
+import Link from 'next/link';
+import Image from 'next/image';
 import {
   CONTACTS,
   LINKS_SERVICE,
   LINKS_SHOP,
   LINKS_ABOUT,
-} from "@/app/lib/contacts";
+} from '../lib/contacts';
 
 export default function Footer() {
   return (
-    <footer className="grid  grid-cols-4  border-[1px]  border-border-table">
-      <div className="flex flex-col gap-6 p-10  border-r-[1px] border-border-table">
+    <footer className="grid  grid-cols-4">
+      <div className="flex flex-col gap-6 p-10">
         <p className="text-base">
           Remember to offer beautiful flowers from Kyiv LuxeBouquets Valentines
           Day, Mothers Day, Christmas... Reminds you 7 days before. No spam or
@@ -27,31 +27,25 @@ export default function Footer() {
           </button>
         </label>
       </div>
-      <div className="flex flex-col p-10 gap-3 justify-between border-r-[1px] border-border-table">
+      <div className="flex flex-col p-10 gap-4">
+        <p className="text-[20px] text-text-footer">Contact Us</p>
         <div>
-          <p className="text-[20px] text-text-footer">Contact Us</p>
-          <div className="mt-3">
-            <p className="text-sm mb-2 text-text-footer">Address</p>
-            <p className="text-base">15/4 Khreshchatyk Street, Kyiv </p>
-          </div>
-          <div>
-            <p className="text-sm mb-2 text-text-footer">Phone</p>
-            <a href={`tel:${+380980099777}`} className="text-base">
-              +380980099777
-            </a>
-          </div>
-          <div>
-            <p className="text-sm mb-2 text-text-footer">General Enquiry:</p>
-            <a
-              href="mailto:Kiev.Florist.Studio@gmail.com"
-              className="text-base"
-            >
-              Kiev.Florist.Studio@gmail.com
-            </a>
-          </div>
+          <p className="text-sm mb-2 text-text-footer">Address</p>
+          <p className="text-base">15/4 Khreshchatyk Street, Kyiv </p>
         </div>
-
-        <div className="flex flex-col ">
+        <div>
+          <p className="text-sm mb-2 text-text-footer">Phone</p>
+          <a href={`tel:${+380980099777}`} className="text-base">
+            +380980099777
+          </a>
+        </div>
+        <div>
+          <p className="text-sm mb-2 text-text-footer">General Enquiry:</p>
+          <a href="mailto:Kiev.Florist.Studio@gmail.com" className="text-base">
+            Kiev.Florist.Studio@gmail.com
+          </a>
+        </div>
+        <div className="flex flex-col">
           <p className="text-[20px] mb-2 text-text-footer">Follow us</p>
           <ul className="flex gap-8">
             {CONTACTS.map((brand, index) => {
@@ -71,10 +65,10 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-      <div className="flex flex-col p-10 gap-6 border-r-[1px] border-border-table">
-        <div className="flex flex-col gap-3">
+      <div className="flex flex-col p-10 gap-6">
+        <div className="flex flex-col gap-6">
           <p className="text-[20px] text-text-footer">Shop</p>
-          <ul className="flex flex-col gap-2">
+          <ul className="flex flex-col  gap-2">
             {LINKS_SHOP.map((link, index) => {
               return (
                 <li key={index}>
@@ -84,9 +78,9 @@ export default function Footer() {
             })}
           </ul>
         </div>
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-6">
           <p className="text-[20px] text-text-footer">Service</p>
-          <ul className="flex flex-col gap-1">
+          <ul className="flex flex-col  gap-2">
             {LINKS_SERVICE.map((link, index) => {
               return (
                 <li key={index}>
@@ -97,9 +91,9 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-      <div className="flex flex-col p-10 gap-3">
+      <div className="flex flex-col p-10 gap-6">
         <p className="text-[20px] text-text-footer">About Us</p>
-        <ul className="flex flex-col  gap-1">
+        <ul className="flex flex-col  gap-2">
           {LINKS_ABOUT.map((link, index) => {
             return (
               <li key={index}>

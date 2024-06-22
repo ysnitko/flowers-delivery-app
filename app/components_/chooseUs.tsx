@@ -1,8 +1,8 @@
 export default function ChooseUS() {
   return (
-    <section className="grid grid-cols-2 border-b-[1px] border-border-table relarive">
-      <h1 className="p-[80px] text-[50px] ">Why choose us?</h1>
-      <div className="flex flex-col [&>div]:p-[80px] [&>div]:flex  [&>div]:flex-col [&>div]:gap-4  [&_h2]:text-[38px] [&_p]:text-base [&>div]:border-b-[1px] [&>div]:border-r-[1px] [&>div]:border-l-[1px] [&>div]:border-border-table [&>div:nth-last-child()]:border-b-0  overflow-scroll">
+    <section className="grid grid-cols-2 border-b-[1px] border-border-table">
+      <h1 className="p-[80px] text-[50px]">Why choose us ?</h1>
+      <div className="flex flex-col [&>div]:p-[80px] [&>div]:flex  [&>div]:flex-col [&>div]:gap-4  [&_h2]:text-[38px] [&_p]:text-base [&>div]:border-b-[1px] [&>div]:border-r-[1px] [&>div]:border-l-[1px] [&>div]:border-border-table [&>*:nth-last-child(odd)]:border-b-[0px]">
         <div>
           <h2>Stylish bouquets by florists</h2>
           <p>
@@ -23,6 +23,7 @@ export default function ChooseUS() {
             thoughtful gift reliably.
           </p>
         </div>
+
         <div>
           <h2>Safe payment</h2>
           <p>
@@ -32,7 +33,7 @@ export default function ChooseUS() {
             thoughtful gift reliably.
           </p>
         </div>
-        <div>
+        <div className="border-b-none">
           <h2>Subscription by your needs</h2>
           <p>
             With our subscription service tailored to your specific needs, you

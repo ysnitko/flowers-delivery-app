@@ -1,11 +1,11 @@
 import Link from 'next/link';
 
-export default function AboutUs() {
+export default function aboutUs() {
   return (
-    <section className="grid grid-cols-2 border-b-[1px] border-r-[1px] border-border-table">
+    <section className="grid grid-cols-2 border-b-[1px] border-border-table">
       <h1 className="p-[80px] text-[50px]">About us</h1>
-      <div className="p-[80px] border-l-[1px]  border-border-table">
-        <div className="flex flex-col gap-4 ">
+      <div className="p-[80px] border-l-[1px] border-border-table">
+        <div className="flex flex-col gap-4">
           <p className="text-sm">OUR STORY</p>
           <p className="text-[38px] font-medium">Kyiv LuxeBouquets</p>
           <p className="text-base mb-[64px]">
@@ -23,7 +23,7 @@ export default function AboutUs() {
         </div>
         <Link
           href="/"
-          className="py-4 px-6 text-base border-[1px] border-border-table"
+          className=" py-4 px-6 text-base border-[1px] border-border-table"
         >
           Learn more
         </Link>

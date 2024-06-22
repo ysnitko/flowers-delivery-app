@@ -1,9 +1,9 @@
-import Image from "next/image";
-import ShopMenu from "./shopMenu";
+import Image from 'next/image';
+import ShopMenu from './shopMenu';
 
 export default function MainСontent() {
   return (
-    <div className="grid grid-cols-2 border-b-[1px] border-r-[1px] border-border-table h-screen">
+    <div className="grid grid-cols-2 border-b-[1px] border-r-[1px] border-border-table">
       <div className="flex flex-col p-[80px]">
         <div className="flex flex-col gap-4 border-b-[1px] border-border-table">
           <p className="text-[67px] leading-[70px]">
@@ -25,7 +25,6 @@ export default function MainСontent() {
         <div className="grid grid-cols-2 pt-6 ">
           <Image
             src="/assets/imghero.png"
-            className="w-full pr-6 "
             alt="img-hero"
             width={256}
             height={256}

@@ -1,6 +1,6 @@
 export default function WeddingEvent() {
   return (
-    <section className="flex justify-center h-screen items-center bg-wedding-bg text-text-btn ">
+    <section className="flex justify-center h-screen items-center bg-wedding-bg text-text-btn">
       <div className="max-w-[530px] flex flex-col items-center gap-4 text-center">
         <p className="text-sm">SERVICE</p>
         <p className="text-5xl">Wedding &amp; Event Decor</p>

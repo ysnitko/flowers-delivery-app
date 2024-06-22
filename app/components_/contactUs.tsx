@@ -1,6 +1,6 @@
-import Image from "next/image";
-import Link from "next/link";
-import { CONTACTS } from "@/app/lib/contacts";
+import Image from 'next/image';
+import Link from 'next/link';
+import { CONTACTS } from '../lib/contacts';
 
 export default function ContactUs() {
   return (
