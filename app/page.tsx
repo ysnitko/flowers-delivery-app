@@ -1,4 +1,4 @@
-import MainContent from './components/mainСontent';
+import MainContents from './components/mainСontent';
 import AboutUs from './components/aboutUS';
 import ChooseUS from './components/chooseUs';
 import ContactUs from './components/contactUs';
@@ -18,9 +18,10 @@ export default function Home() {
   //       console.error('Ошибка при отправке уведомления:', error.message);
   //     });
   // }, []);
+
   return (
     <main>
-      <MainContent />
+      <MainContents />
       <AboutUs />
       <ChooseUS />
       <ContactUs />

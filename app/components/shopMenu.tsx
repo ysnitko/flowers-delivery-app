@@ -14,26 +14,22 @@ export default function ShopMenu() {
           </div>
         </li>
         <li className="">
-          <Link href="#">
-            <Image
-              src="/assets/card_item_1.png"
-              className="w-full h-full "
-              width={360}
-              height={360}
-              alt="Item_1"
-            />
-          </Link>
+          <Image
+            src="/assets/card_item_1.png"
+            className="w-full h-full "
+            width={360}
+            height={360}
+            alt="Item_1"
+          />
         </li>
         <li>
-          <Link href="#">
-            <Image
-              className=" w-full"
-              src="/assets/card_item_2.png"
-              width={360}
-              height={360}
-              alt="Item_1"
-            />
-          </Link>
+          <Image
+            className=" w-full"
+            src="/assets/card_item_2.png"
+            width={360}
+            height={360}
+            alt="Item_1"
+          />
         </li>
         <li className="flex flex-col items-center justify-end">
           <div className=" flex flex-col h-[60%] gap-10  items-center">
@@ -53,26 +49,22 @@ export default function ShopMenu() {
           </div>
         </li>
         <li>
-          <Link href="#">
-            <Image
-              className=" w-full"
-              src="/assets/card_item_3.png"
-              width={360}
-              height={360}
-              alt="Item_1"
-            />
-          </Link>
+          <Image
+            className=" w-full"
+            src="/assets/card_item_3.png"
+            width={360}
+            height={360}
+            alt="Item_3"
+          />
         </li>
         <li>
-          <Link href="#">
-            <Image
-              className=" w-full"
-              src="/assets/card_item_4.png"
-              width={360}
-              height={360}
-              alt="Item_1"
-            />
-          </Link>
+          <Image
+            className=" w-full"
+            src="/assets/card_item_4.png"
+            width={360}
+            height={360}
+            alt="Item_4"
+          />
         </li>
         <li className="flex flex-col items-center justify-end">
           <div className=" flex flex-col h-[60%] gap-10  items-center">
@@ -92,15 +84,13 @@ export default function ShopMenu() {
           </div>
         </li>
         <li>
-          <Link href="#">
-            <Image
-              className=" w-full h-full"
-              src="/assets/card_item_5.png"
-              width={360}
-              height={360}
-              alt="Item_1"
-            />
-          </Link>
+          <Image
+            className=" w-full h-full"
+            src="/assets/card_item_5.png"
+            width={360}
+            height={360}
+            alt="Item_5"
+          />
         </li>
       </ul>
     </div>
