@@ -2,10 +2,27 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { MENU_LINKS } from '../lib/menuLinks';
-
+import { getCategory } from '../lib/actions';
 import { useEffect, useState } from 'react';
 
-export default function ShopMenu() {
+interface ShopMenuProps {
+  categoryLinks: { id: number; name: string; src: string }[];
+}
+
+export default function ShopMenu({ categoryLinks }: ShopMenuProps) {
+  // useEffect(() => {
+  //   const fetchMenuLinks = async () => {
+  //     try {
+  //       const res = await fetch('/app/lib/actions.ts');
+  //       const data = await res.json();
+  //       console.log(data);
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
+  //   };
+  //   fetchMenuLinks();
+  // }, []);
+
   const [menuNav, setMenuNav] = useState('');
 
   return (
@@ -20,7 +37,7 @@ export default function ShopMenu() {
             >
               <p className="text-4xl font-bold">{item.name}</p>
               <Link
-                href="#"
+                href={`/category/${categoryLinks[index].name}`}
                 className={`  ${
                   item.id % 2 === 0
                     ? 'before:content-arrow-left before:mr-2'

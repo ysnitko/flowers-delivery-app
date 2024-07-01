@@ -1,7 +1,11 @@
-import Image from "next/image";
-import ShopMenu from "./shopMenu";
+import Image from 'next/image';
+import ShopMenu from './shopMenu';
 
-export default function MainСontent() {
+interface MainContentsProps {
+  categoryLinks: { id: number; name: string; src: string }[];
+}
+
+export default function MainСontent({ categoryLinks }: MainContentsProps) {
   return (
     <div className="grid grid-cols-2 border-b-[1px] border-r-[1px] border-border-table h-screen">
       <div className="flex flex-col p-[80px]">
@@ -36,7 +40,7 @@ export default function MainСontent() {
           </p>
         </div>
       </div>
-      <ShopMenu />
+      <ShopMenu categoryLinks={categoryLinks} />
     </div>
   );
 }

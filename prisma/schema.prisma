@@ -26,9 +26,3 @@ model Product {
   Category    Category? @relation(fields: [productId], references: [id])
   productId   Int?
 }
-
-model Menu {
-  id   Int    @id @default(autoincrement())
-  name String
-  src  String @default("")
-}

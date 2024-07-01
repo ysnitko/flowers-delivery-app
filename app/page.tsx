@@ -5,8 +5,15 @@ import ContactUs from './components/contactUs';
 import OurService from './components/ourService';
 import WeddingEvent from './components/weddingEvent';
 import ClientSay from './components/clientSay';
+import { getCategory } from './lib/actions';
 
-export default function Home() {
+export default async function Home() {
+  const categoryLinks: {
+    id: number;
+    name: string;
+    src: string;
+  }[] = await getCategory();
+
   // useEffect(() => {
   //   // Отправка запроса к вашему API маршруту при загрузке страницы
   //   axios
@@ -21,7 +28,7 @@ export default function Home() {
 
   return (
     <main>
-      <MainContents />
+      <MainContents categoryLinks={categoryLinks} />
       <AboutUs />
       <ChooseUS />
       <ContactUs />
