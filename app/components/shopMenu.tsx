@@ -10,119 +10,37 @@ export default function ShopMenu() {
 
   return (
     <div className="relative overflow-scroll scroll-sm border-border-table border-l-[1px]">
-      {/* <ul className="grid grid-cols-2 grid-rows-5 gap-0 absolute [&_li]:border-border-table  w-full [&_img:hover]:scale-125 [&_img:hover]:origin-center [&_img:hover]:transition-transform [&_img:hover]:duration-500 [&_img:hover]:ease-in-out [&_li]:overflow-hidden [&_img]:h-full">
-        <li className="flex flex-col items-center justify-end  ">
-          <div className=" flex flex-col h-[60%] gap-20  items-center">
-            <p className="text-4xl font-bold">Fresh Flowers</p>
-            <Link href="#" className="after:content-arrow-right after:ml-2">
-              Shop now
-            </Link>
-          </div>
-        </li>
-        <li className="">
-          <Image
-            src="/assets/card_item_1.png"
-            className="w-full h-full "
-            width={360}
-            height={360}
-            alt="Item_1"
-          />
-        </li>
-        <li>
-          <Image
-            className=" w-full"
-            src="/assets/card_item_2.png"
-            width={360}
-            height={360}
-            alt="Item_1"
-          />
-        </li>
-        <li className="flex flex-col items-center justify-end">
-          <div className=" flex flex-col h-[60%] gap-10  items-center">
-            <p className="text-4xl font-bold">Dried Flowers</p>
-            <Link href="#" className="before:content-arrow-left before:mr-2">
-              Shop now
-            </Link>
-          </div>
-        </li>
-
-        <li className="flex flex-col items-center justify-end">
-          <div className=" flex flex-col h-[60%] gap-10  items-center">
-            <p className="text-4xl font-bold">Live Plants</p>
-            <Link href="#" className="after:content-arrow-right after:ml-2">
-              Shop now
-            </Link>
-          </div>
-        </li>
-        <li>
-          <Image
-            className=" w-full"
-            src="/assets/card_item_3.png"
-            width={360}
-            height={360}
-            alt="Item_3"
-          />
-        </li>
-        <li>
-          <Image
-            className=" w-full"
-            src="/assets/card_item_4.png"
-            width={360}
-            height={360}
-            alt="Item_4"
-          />
-        </li>
-        <li className="flex flex-col items-center justify-end">
-          <div className=" flex flex-col h-[60%] gap-10  items-center">
-            <p className="text-4xl font-bold">Aroma Candels</p>
-            <Link href="#" className="before:content-arrow-left before:mr-2">
-              Shop now
-            </Link>
-          </div>
-        </li>
-
-        <li className="flex flex-col items-center justify-end ">
-          <div className=" flex flex-col h-[60%] gap-10  items-center">
-            <p className="text-4xl font-bold">Fresheners</p>
-            <Link href="#" className="after:content-arrow-right after:ml-2">
-              Shop now
-            </Link>
-          </div>
-        </li>
-        <li>
-          <Image
-            className=" w-full h-full"
-            src="/assets/card_item_5.png"
-            width={360}
-            height={360}
-            alt="Item_5"
-          />
-        </li>
-      </ul> */}
-      <ul className="grid grid-cols-2 grid-rows-5 gap-0 absolute [&_li]:border-border-table  w-full [&_img:hover]:scale-125 [&_img:hover]:origin-center [&_img:hover]:transition-transform [&_img:hover]:duration-500 [&_img:hover]:ease-in-out [&_li]:overflow-hidden [&_img]:h-full [&>li:nth-child(4n+1)]:order-1 [&>li:nth-child(4n)]:order-2">
+      <ul className="grid grid-rows-5 gap-0 absolute [&_li]:border-border-table  w-full [&_img:hover]:scale-125 [&_img:hover]:origin-center [&_img:hover]:transition-transform [&_img:hover]:duration-500 [&_img:hover]:ease-in-out [&_img]:h-full">
         {MENU_LINKS.map((item, index) => (
-
-          {index % 2 === 0 ? 
-            <li className={`flex flex-col items-center justify-end `}>
-          <div className="flex flex-col h-[60%] gap-20 items-center">
-            <p className="text-4xl font-bold">{item.name}</p>
-            <Link href="#" className="after:content-arrow-right after:ml-2">
-              Shop now
-            </Link>
-          </div>
-        </li> : <li className={`flex justify-center items-center`}>
-        <Image
-          src={item.src}
-          className="w-full h-full"
-          width={360}
-          height={360}
-          alt="alt"
-        />
-      </li>
-            
-            
-          }))}
-        
+          <li key={index} className={`grid grid-cols-2`}>
+            <div
+              className={`flex flex-col  gap-20 justify-center items-center  ${
+                item.id % 2 === 0 && 'order-2'
+              }`}
+            >
+              <p className="text-4xl font-bold">{item.name}</p>
+              <Link
+                href="#"
+                className={`  ${
+                  item.id % 2 === 0
+                    ? 'before:content-arrow-left before:mr-2'
+                    : 'after:content-arrow-right after:ml-2'
+                }  `}
+              >
+                Shop now
+              </Link>
+            </div>
+            <div className="overflow-hidden">
+              <Image
+                src={item.src}
+                className={`w-full h-full ${item.id % 2 === 0 && 'order-1'} `}
+                width={360}
+                height={360}
+                alt="Item_1"
+              />
+            </div>
+          </li>
+        ))}
       </ul>
     </div>
   );
