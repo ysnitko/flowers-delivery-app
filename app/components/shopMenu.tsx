@@ -1,10 +1,16 @@
+'use client';
 import Link from 'next/link';
 import Image from 'next/image';
+import { MENU_LINKS } from '../lib/menuLinks';
+
+import { useEffect, useState } from 'react';
 
 export default function ShopMenu() {
+  const [menuNav, setMenuNav] = useState('');
+
   return (
     <div className="relative overflow-scroll scroll-sm border-border-table border-l-[1px]">
-      <ul className="grid grid-cols-2 grid-rows-5 gap-0 absolute [&_li]:border-border-table  w-full [&_img:hover]:scale-125 [&_img:hover]:origin-center [&_img:hover]:transition-transform [&_img:hover]:duration-500 [&_img:hover]:ease-in-out [&_li]:overflow-hidden [&_img]:h-full">
+      {/* <ul className="grid grid-cols-2 grid-rows-5 gap-0 absolute [&_li]:border-border-table  w-full [&_img:hover]:scale-125 [&_img:hover]:origin-center [&_img:hover]:transition-transform [&_img:hover]:duration-500 [&_img:hover]:ease-in-out [&_li]:overflow-hidden [&_img]:h-full">
         <li className="flex flex-col items-center justify-end  ">
           <div className=" flex flex-col h-[60%] gap-20  items-center">
             <p className="text-4xl font-bold">Fresh Flowers</p>
@@ -92,6 +98,31 @@ export default function ShopMenu() {
             alt="Item_5"
           />
         </li>
+      </ul> */}
+      <ul className="grid grid-cols-2 grid-rows-5 gap-0 absolute [&_li]:border-border-table  w-full [&_img:hover]:scale-125 [&_img:hover]:origin-center [&_img:hover]:transition-transform [&_img:hover]:duration-500 [&_img:hover]:ease-in-out [&_li]:overflow-hidden [&_img]:h-full [&>li:nth-child(4n+1)]:order-1 [&>li:nth-child(4n)]:order-2">
+        {MENU_LINKS.map((item, index) => (
+
+          {index % 2 === 0 ? 
+            <li className={`flex flex-col items-center justify-end `}>
+          <div className="flex flex-col h-[60%] gap-20 items-center">
+            <p className="text-4xl font-bold">{item.name}</p>
+            <Link href="#" className="after:content-arrow-right after:ml-2">
+              Shop now
+            </Link>
+          </div>
+        </li> : <li className={`flex justify-center items-center`}>
+        <Image
+          src={item.src}
+          className="w-full h-full"
+          width={360}
+          height={360}
+          alt="alt"
+        />
+      </li>
+            
+            
+          }))}
+        
       </ul>
     </div>
   );
