@@ -2,8 +2,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { MENU_LINKS } from '../lib/menuLinks';
-import { getCategory } from '../lib/actions';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 interface ShopMenuProps {
   categoryLinks: { id: number; name: string; src: string }[];
