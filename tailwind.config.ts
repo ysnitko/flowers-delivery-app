@@ -1,4 +1,3 @@
-import { url } from 'inspector';
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
@@ -14,6 +13,7 @@ const config: Config = {
         'wedding-bg': "url('/assets/wedding-bg.png')",
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'category-bg': "url('/assets/wedding-bg.png')",
       },
       fontFamily: {
         gilroy: ['Gilroy', 'sans-serif'],
