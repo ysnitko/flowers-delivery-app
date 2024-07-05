@@ -48,8 +48,8 @@ export default function Category({
         />
       </div>
       <div className="relative overflow-hidden overflow-y-scroll">
-        <ul className="grid grid-cols-2 absolute">
-          {categoryProducts?.map((product) => (
+        <ul className="grid grid-cols-2 absolute [&_li]:border-border-table [&_li:nth-child(2n+1))]:border-l-[1px] [&_li:nth-child(n)]:border-r-[1px] [&_li]:border-b-[1px] [&_li:nth-last-child(-n+2)]:border-b-[0px] ">
+          {categoryProducts.map((product) => (
             <li key={product.id} className="relative">
               <Link href="/">
                 <Image
