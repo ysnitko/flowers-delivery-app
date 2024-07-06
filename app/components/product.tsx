@@ -1,71 +1,87 @@
 'use client';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
-interface CategoryProps {
+interface ProductProps {
+  chooseProduct: {
+    id: number;
+    name: string;
+    src: string;
+    srcCover: string;
+    title: string | null;
+    description: string;
+    price: number;
+  }[];
   categoryName: {
     id: number;
     name: string;
     src: string;
     title: string | null;
   }[];
-  categoryProducts: {
-    id: number;
-    name: string;
-    src: string;
-    title: string | null;
-    description: string;
-    price: number;
-  }[];
 }
 
-export default function Product() {
+export default function Product({ chooseProduct, categoryName }: ProductProps) {
   const path = usePathname();
-  // const titleSelection = categoryName.find(
-  //   (item) => item.name === path?.slice(path.lastIndexOf('/') + 1)
-  // );
+  const pathSegment = path?.split('/')[2];
+  const productSelection = chooseProduct.find(
+    (item) => item.name === path?.slice(path.lastIndexOf('/') + 1)
+  );
+  const categorySelection = categoryName.find(
+    (item) => item.name === pathSegment
+  );
 
   return (
-    <div></div>
-    // <div className="grid grid-cols-2">
-    //   <div className="relative max-h-[700px]">
-    //     <p
-    //       className="absolute text-[68px] md:text-[48px]
-    //     top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
-    //      text-text-btn font-semibold tracking-wider"
-    //     >
-    //       {titleSelection?.title}
-    //     </p>
-    //     <Image
-    //       className="w-full h-full"
-    //       src={`${titleSelection?.src}`}
-    //       width={700}
-    //       height={700}
-    //       alt={`${titleSelection?.name}`}
-    //     />
-    //   </div>
-    //   <div className="relative overflow-hidden overflow-y-scroll">
-    //     <ul className="grid grid-cols-2 absolute [&_li]:border-border-table [&_li:nth-child(2n+1))]:border-l-[1px] [&_li:nth-child(n)]:border-r-[1px] [&_li]:border-b-[1px] [&_li:nth-last-child(-n+2)]:border-b-[0px] ">
-    //       {categoryProducts.map((product) => (
-    //         <li key={product.id} className="relative">
-    //           <Link href={`${path}/${product.name}`}>
-    //             <Image
-    //               src={product.src}
-    //               alt={product.name}
-    //               width={360}
-    //               height={360}
-    //             />
-    //             <div className="absolute flex flex-col gap-0 items-center justify-center bottom-3 left-1/2 -translate-x-1/2">
-    //               <span className="text-base">{product.title}</span>
-    //               <span className="text-sm text-text-footer">
-    //                 price {product.price}$
-    //               </span>
-    //             </div>
-    //           </Link>
-    //         </li>
-    //       ))}
-    //     </ul>
-    //   </div>
-    // </div>
+    <div className="grid grid-cols-2">
+      <div className="relative max-h-[700px]">
+        <p
+          className="absolute text-[68px] md:text-[48px]
+        top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+         text-text-btn font-semibold tracking-wider"
+        >
+          {productSelection?.title}
+        </p>
+        <Image
+          className="w-full h-full"
+          src={`${productSelection?.srcCover}`}
+          width={700}
+          height={700}
+          alt={`${productSelection?.title}`}
+        />
+      </div>
+      <div>
+        <div className="flex flex-col gap-6 p-10">
+          <div className="text-sm uppercase ">
+            <span>{`${categorySelection?.title}`} / </span>
+            <span className="text-text-footer">{`${productSelection?.title}`}</span>
+          </div>
+          <div>
+            <p className="text-[38px] font-medium">
+              {productSelection?.title} - ${productSelection?.price}
+            </p>
+            <p className="text-base text-text-description">
+              {productSelection?.description}
+            </p>
+          </div>
+          <div>
+            <span>Quantity: </span>
+            {/* component counter */}
+          </div>
+          <div>
+            <div className="flex justify-between">
+              <span className="text-lg">Excellent Combination with:</span>
+              <span className="text-base text-text-footer">
+                Vase Not Included
+              </span>
+            </div>
+            {/* Slider */}
+          </div>
+          <div>
+            <p className="text-lg">Price options</p>
+            {/* Radio */}
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
