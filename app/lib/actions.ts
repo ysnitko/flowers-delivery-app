@@ -13,3 +13,12 @@ export async function getProductsFromCategory(category: any) {
   });
   return productsCategory;
 }
+
+export async function getProduct(product: any) {
+  const productsCategory = await prisma.product.findMany({
+    where: {
+      name: product.name,
+    },
+  });
+  return productsCategory;
+}

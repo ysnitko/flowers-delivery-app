@@ -22,8 +22,6 @@ export default function ShopMenu({ categoryLinks }: ShopMenuProps) {
   //   fetchMenuLinks();
   // }, []);
 
-  const [menuNav, setMenuNav] = useState('');
-
   return (
     <div className="relative overflow-scroll scroll-sm border-border-table border-l-[1px]">
       <ul className="grid grid-rows-5 gap-0 absolute [&_li]:border-border-table  w-full [&_img:hover]:scale-125 [&_img:hover]:origin-center [&_img:hover]:transition-transform [&_img:hover]:duration-500 [&_img:hover]:ease-in-out [&_img]:h-full">

@@ -16,6 +16,7 @@ export default async function CategoryPage() {
     id: number;
     name: string;
     src: string;
+    srcCover: string;
     title: string | null;
     description: string;
     price: number;

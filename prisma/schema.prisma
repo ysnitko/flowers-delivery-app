@@ -23,6 +23,7 @@ model Product {
   name        String
   title       String?
   src         String    @default("")
+  srcCover    String    @default("")
   description String
   price       Int
   Category    Category? @relation(fields: [productId], references: [id])
