@@ -32,6 +32,9 @@ const config: Config = {
         'text-footer': '#808080',
         'text-description': '#121212',
       },
+      gridTemplateColumns: {
+        quantity: '1fr 1.4fr 1fr',
+      },
     },
   },
   plugins: [],

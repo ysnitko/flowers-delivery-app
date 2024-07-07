@@ -34,7 +34,7 @@ export default function ShopMenu({ categoryLinks }: ShopMenuProps) {
             >
               <p className="text-4xl font-bold">{item.name}</p>
               <Link
-                href={`/category/${categoryLinks[index].name}`}
+                href={`/${categoryLinks[index].name}`}
                 className={`  ${
                   item.id % 2 === 0
                     ? 'before:content-arrow-left before:mr-2'

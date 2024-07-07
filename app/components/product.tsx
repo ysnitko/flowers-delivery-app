@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+import Quantity from './quantity';
 
 interface ProductProps {
   chooseProduct: {
@@ -23,7 +24,7 @@ interface ProductProps {
 
 export default function Product({ chooseProduct, categoryName }: ProductProps) {
   const path = usePathname();
-  const pathSegment = path?.split('/')[2];
+  const pathSegment = path?.split('/')[1];
   const productSelection = chooseProduct.find(
     (item) => item.name === path?.slice(path.lastIndexOf('/') + 1)
   );
@@ -63,9 +64,9 @@ export default function Product({ chooseProduct, categoryName }: ProductProps) {
               {productSelection?.description}
             </p>
           </div>
-          <div>
-            <span>Quantity: </span>
-            {/* component counter */}
+          <div className="w-full gap-4 flex items-center">
+            <span className="text-lg">Quantity: </span>
+            <Quantity />
           </div>
           <div>
             <div className="flex justify-between">
