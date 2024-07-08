@@ -22,3 +22,15 @@ export async function getProduct(product: any) {
   });
   return productsCategory;
 }
+
+export async function getCombinations(productId: number) {
+  const productCombination = await prisma.product.findUnique({
+    where: {
+      id: productId,
+    },
+    include: {
+      Combination: true,
+    },
+  });
+  return productCombination?.Combination || [];
+}

@@ -19,13 +19,26 @@ model Category {
 }
 
 model Product {
-  id          Int       @id @default(autoincrement())
+  id          Int           @id @default(autoincrement())
   name        String
   title       String?
-  src         String    @default("")
-  srcCover    String    @default("")
+  src         String        @default("")
+  srcCover    String        @default("")
   description String
   price       Int
-  Category    Category? @relation(fields: [productId], references: [id])
+  Category    Category?     @relation(fields: [productId], references: [id])
   productId   Int?
+  Combination Combination[]
+}
+
+model Combination {
+  id            Int      @id @default(autoincrement())
+  name          String
+  title         String?
+  src           String   @default("")
+  srcCover      String   @default("")
+  description   String
+  price         Int
+  Product       Product? @relation(fields: [combinationId], references: [id])
+  combinationId Int?
 }

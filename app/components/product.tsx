@@ -1,8 +1,8 @@
 'use client';
-import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import Quantity from './quantity';
+import CarouselProducts from './carouselProducts';
 
 interface ProductProps {
   chooseProduct: {
@@ -13,6 +13,7 @@ interface ProductProps {
     title: string | null;
     description: string;
     price: number;
+    productId: number | null;
   }[];
   categoryName: {
     id: number;
@@ -20,9 +21,14 @@ interface ProductProps {
     src: string;
     title: string | null;
   }[];
+  combination: (productId: any) => Promise<any>;
 }
 
-export default function Product({ chooseProduct, categoryName }: ProductProps) {
+export default function Product({
+  chooseProduct,
+  categoryName,
+  combination,
+}: ProductProps) {
   const path = usePathname();
   const pathSegment = path?.split('/')[1];
   const productSelection = chooseProduct.find(
@@ -76,6 +82,7 @@ export default function Product({ chooseProduct, categoryName }: ProductProps) {
               </span>
             </div>
             {/* Slider */}
+            <CarouselProducts combination={combination} />
           </div>
           <div>
             <p className="text-lg">Price options</p>
