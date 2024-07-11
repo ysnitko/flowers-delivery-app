@@ -1,7 +1,7 @@
 import { Carousel } from 'react-responsive-carousel';
 import Image from 'next/image';
 
-export default function CarouselProducts(combination: any) {
+export default function CarouselProducts() {
   return (
     <Carousel>
       <div>

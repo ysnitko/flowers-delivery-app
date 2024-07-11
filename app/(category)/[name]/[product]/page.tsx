@@ -22,17 +22,9 @@ export default async function ProductPage() {
     title: string | null;
   }[] = await getCategory();
 
-  const combination = async (productId: any) => {
-    const comb = await getCombinations(productId);
+  // const productId = chooseProduct.find((item)=> item.name === )
 
-    return comb;
-  };
+  // const combinationProduct: any = await getCombinations();
 
-  return (
-    <Product
-      chooseProduct={chooseProduct}
-      categoryName={categoryName}
-      combination={combination}
-    />
-  );
+  return <Product chooseProduct={chooseProduct} categoryName={categoryName} />;
 }

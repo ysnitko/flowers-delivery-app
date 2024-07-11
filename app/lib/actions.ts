@@ -24,13 +24,13 @@ export async function getProduct(product: any) {
 }
 
 export async function getCombinations(productId: number) {
-  const productCombination = await prisma.product.findUnique({
+  const productCombination = await prisma.product.findMany({
     where: {
       id: productId,
     },
-    include: {
-      Combination: true,
-    },
+    // include: {
+    //   Combination: true,
+    // },
   });
-  return productCombination?.Combination || [];
+  return productCombination || [];
 }
