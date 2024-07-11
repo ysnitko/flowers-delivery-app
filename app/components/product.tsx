@@ -3,7 +3,6 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import Quantity from './quantity';
 import CarouselProducts from './carouselProducts';
-import { useEffect } from 'react';
 
 interface ProductProps {
   chooseProduct: {
@@ -15,6 +14,7 @@ interface ProductProps {
     description: string;
     price: number;
     productId: number | null;
+    Combination: any[];
   }[];
   categoryName: {
     id: number;
@@ -78,7 +78,7 @@ export default function Product({ chooseProduct, categoryName }: ProductProps) {
               </span>
             </div>
             {/* Slider */}
-            {/* <CarouselProducts productSelection={productSelection} /> */}
+            <CarouselProducts productSelection={productSelection} />
           </div>
           <div>
             <p className="text-lg">Price options</p>
