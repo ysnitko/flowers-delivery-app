@@ -13,7 +13,21 @@ export default async function ProductPage() {
     description: string;
     price: number;
     productId: number | null;
-  }[] = await prisma.product.findMany();
+    Combination: {
+      id: number;
+      name: string;
+      src: string;
+      srcCover: string;
+      title: string | null;
+      description: string;
+      price: number;
+      productId: number | null;
+    }[];
+  }[] = await prisma.product.findMany({
+    include: {
+      Combination: true,
+    },
+  });
 
   const categoryName: {
     id: number;

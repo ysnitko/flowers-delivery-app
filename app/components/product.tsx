@@ -14,7 +14,16 @@ interface ProductProps {
     description: string;
     price: number;
     productId: number | null;
-    Combination: any[];
+    Combination: {
+      id: number;
+      name: string;
+      src: string;
+      srcCover: string;
+      title: string | null;
+      description: string;
+      price: number;
+      productId: number | null;
+    }[];
   }[];
   categoryName: {
     id: number;
