@@ -1,0 +1,19 @@
+.slick-track {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.slick-slider {
+   max-width: 100%;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+}
+
+.slick-prev {
+    width: 34px;
+    height: 34px;
+    background: url('/public//assets/next.png');
+    background-size: contain;
+}
