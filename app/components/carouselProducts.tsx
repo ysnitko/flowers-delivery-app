@@ -1,4 +1,3 @@
-import Slider from 'react-slick';
 import Image from 'next/image';
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
@@ -35,7 +34,7 @@ export default function CarouselProducts({
 
   return (
     <div className="slider-container">
-      <AliceCarousel>
+      <AliceCarousel autoWidth disableDotsControls={true}>
         {productSelection?.Combination.map((item) => (
           <div key={item.id} className="flex flex-col justify-between">
             <Image src={item.src} width={100} height={100} alt="" />
