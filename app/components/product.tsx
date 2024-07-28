@@ -79,7 +79,7 @@ export default function Product({ chooseProduct, categoryName }: ProductProps) {
             <span className="text-lg">Quantity: </span>
             <Quantity />
           </div>
-          <div>
+          <div className="flex flex-col gap-4">
             <div className="flex justify-between">
               <span className="text-lg">Excellent Combination with:</span>
               <span className="text-base text-text-footer">
