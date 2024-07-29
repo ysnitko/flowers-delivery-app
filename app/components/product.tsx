@@ -86,12 +86,36 @@ export default function Product({ chooseProduct, categoryName }: ProductProps) {
                 Vase Not Included
               </span>
             </div>
-            {/* Slider */}
             <CarouselProducts productSelection={productSelection} />
           </div>
-          <div>
+          <div className="flex flex-col gap-4">
             <p className="text-lg">Price options</p>
-            {/* Radio */}
+            <div className="text-base flex flex-col gap-4">
+              <label htmlFor="priceOption1" className="flex gap-4">
+                <input
+                  className="w-6 h-6"
+                  type="radio"
+                  id="priceOption1"
+                  name="priceOption1"
+                  value="priceOption1"
+                />
+                <p>One time purchase. Price ${productSelection?.price}</p>
+              </label>
+
+              <label htmlFor="priceOption2" className="flex gap-4">
+                <input
+                  className="w-6 h-6"
+                  type="radio"
+                  id="priceOption2"
+                  name="priceOption1"
+                  value="priceOption1"
+                />
+                <p>Subscribe now, and save 25% on this order.</p>
+              </label>
+            </div>
+            <button className="w-full bg-text-description text-base text-text-btn py-[18px]">
+              ADD TO BASKET
+            </button>
           </div>
         </div>
       </div>
