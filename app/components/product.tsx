@@ -91,18 +91,27 @@ export default function Product({ chooseProduct, categoryName }: ProductProps) {
           <div className="flex flex-col gap-4">
             <p className="text-lg">Price options</p>
             <div className="text-base flex flex-col gap-4">
-              <label htmlFor="priceOption1" className="flex gap-4">
+              <label
+                htmlFor="priceOption1"
+                className="flex gap-4 container-radio"
+              >
+                One time purchase. Price ${productSelection?.price}
                 <input
                   className="w-6 h-6"
                   type="radio"
                   id="priceOption1"
                   name="priceOption1"
                   value="priceOption1"
+                  defaultChecked
                 />
-                <p>One time purchase. Price ${productSelection?.price}</p>
+                <span className="checkmark"></span>
               </label>
 
-              <label htmlFor="priceOption2" className="flex gap-4">
+              <label
+                htmlFor="priceOption2"
+                className="flex gap-4 container-radio"
+              >
+                Subscribe now, and save 25% on this order.
                 <input
                   className="w-6 h-6"
                   type="radio"
@@ -110,7 +119,7 @@ export default function Product({ chooseProduct, categoryName }: ProductProps) {
                   name="priceOption1"
                   value="priceOption1"
                 />
-                <p>Subscribe now, and save 25% on this order.</p>
+                <span className="checkmark"></span>
               </label>
             </div>
             <button className="w-full bg-text-description text-base text-text-btn py-[18px]">

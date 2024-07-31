@@ -2,6 +2,8 @@
 import Product from '@/app/components/product';
 import { prisma } from '@/app/lib/prisma';
 import { getCategory, getCombinations } from '@/app/lib/actions';
+import Layout from './layout';
+// import './page.css';
 
 export default async function ProductPage() {
   const chooseProduct: {
@@ -40,5 +42,12 @@ export default async function ProductPage() {
 
   // const combinationProduct: any = await getCombinations();
 
-  return <Product chooseProduct={chooseProduct} categoryName={categoryName} />;
+  return (
+    <Layout>
+      <Product chooseProduct={chooseProduct} categoryName={categoryName} />
+      <p className="w-full py-20 text-4xl text-center border-t-[1px] border-r-[1px] border-l-[1px] border-black">
+        You may also like…
+      </p>
+    </Layout>
+  );
 }
