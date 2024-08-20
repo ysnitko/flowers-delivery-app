@@ -40,7 +40,7 @@ export default async function ProductPage() {
 
   // const productId = chooseProduct.find((item)=> item.name === )
 
-  // const combinationProduct: any = await getCombinations();
+  const combinationProduct: any = await getCombinations();
 
   return (
     <Layout>
