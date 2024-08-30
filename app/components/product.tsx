@@ -44,8 +44,8 @@ export default function Product({ chooseProduct, categoryName }: ProductProps) {
   );
 
   return (
-    <div className="grid grid-cols-2">
-      <div className="relative max-h-[700px]">
+    <div className="grid grid-cols-2 border-border-table border-l-[1px] border-r-[1px]">
+      <div className="relative max-h-[700px] ">
         <p
           className="absolute text-[68px] md:text-[48px]
         top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
