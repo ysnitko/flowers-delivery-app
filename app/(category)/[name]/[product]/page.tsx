@@ -23,7 +23,7 @@ export default async function ProductPage() {
       title: string | null;
       description: string;
       price: number;
-      productId: number | null;
+      productId: number;
     }[];
   }[] = await prisma.product.findMany({
     include: {
